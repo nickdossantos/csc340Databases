@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+File:    courses.html
+Author:  Hank Feild
+Date:    02-Nov-2017
+Purpose: Presents an interface for visualizing and updating information about
+         a catalog, course of study, and schedules.
+-->
+<html>
+<head>
+    <title>Course selection</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="courses.js"></script>
+    <style>
+    .output {
+        border: 2px solid black;
+        white-space: pre;
+        padding: 3px;
+        width: 100%;
+        min-height: 10px;
+        box-sizing: border-box;
+    }
+
+    </style>
+</head>
+<body>
+<h1>Student class selection</h1>
+<p>
+Please register for classes. The course of study will be printed at the bottom
+of this page once you have selected a semester. 
+</p>
+
+<div id="student-schedule">
+    <h2>Student schedule</h2>
+    <form id="student-schedule-form">
+        Student ID: <input type="text" id="studentId"/><br/>
+        Semester: <input type="text" id="semester"><br/>
+    </form>
+    <button id="set-student">Set student/semester</button>
+    <div class="output" id="student-schedule-output">
+    </div>
+
+    <h3>Add or drop a class</h3>
+    <form id="add-drop-class-form">
+        Class prefix: <input type="text" id="prefix"/><br/>
+        Course no: <input type="text" id="courseNo"/><br/>
+        Section no: <input type="text" id="section"/><br/>
+    </form>
+    <button id="add-class">Add class</button>
+    <button id="drop-class">Drop class</button>
+    <div class="output" id="add-drop-class-output">
+    </div>
+</div>
+
+<div id="course-of-study">
+    <h2>Course of study</h2>
+    <div class="output" id="course-of-study-output">
+    </div>
+</div>
+
+   
+
+</body>
+</html>
+
+
+
+
